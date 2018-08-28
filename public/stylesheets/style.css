@@ -1,0 +1,53 @@
+#g-reads-header {
+    color: white;
+    font-size: 15pt;
+}
+#header-image {
+    height: 70px;
+    width: 90px;
+    margin: 0;
+}
+.splash-image-container {
+    display: flex;
+    height: 500px;
+    width: 500px;
+    flex-flow: column nowrap;
+    border: solid black;
+}
+#home-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.splash-image {
+    justify-content: center;
+    height: 400px;
+}
+
+.book-info {
+    display: flex;
+    border: solid black 1px;
+    flex-flow: column wrap;
+    padding-left: 20px;
+    padding-right: 50px;
+}
+
+.book-card {
+    display: flex;
+}
+
+.book-card-image {
+    height: 200px;
+    width: 200px;
+}
+
+.book-image {
+    display: flex;
+    border: solid black 1px;
+    width: 250px;
+    justify-content: center;
+    align-items: center;
+}
+h4 {
+    margin: 0px;
+}
