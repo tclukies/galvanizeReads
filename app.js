@@ -17,14 +17,14 @@ app.get("/", function(req, res) {
     res.render("home");
 });
 
-app.get("/api/books", (request, response, next) => {
-    queries
-        .listAPIBooks()
-        .then(books => {
-            response.json({ books });
-        })
-        .catch(next);
-});
+// app.get("/api/books", (request, response, next) => {
+//     queries
+//         .listAPIBooks()
+//         .then(books => {
+//             response.json({ books });
+//         })
+//         .catch(next);
+// });
 
 app.get("/books", (req, res, next) => {
     queries
