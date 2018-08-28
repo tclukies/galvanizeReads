@@ -15,7 +15,7 @@ exports.seed = function(knex, Promise) {
         })
         .then(() => {
             return knex.raw(
-                "ALTER SEQUENCE authors_books_id_seq RESTART WITH 7;"
+                "ALTER SEQUENCE authors_books_id_seq RESTART WITH 9;"
             );
         });
 };

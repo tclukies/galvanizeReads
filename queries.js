@@ -11,7 +11,8 @@ module.exports = {
                 first_name: "author.first_name",
                 last_name: "author.last_name",
                 genre: "book.genre",
-                cover_url: "book.cover_url"
+                cover_url: "book.cover_url",
+                synopsis: "book.synopsis"
             });
     }
 };

@@ -17,14 +17,23 @@ app.get("/", function(req, res) {
     res.render("home");
 });
 
-app.get("/books", (request, response, next) => {
+app.get("/books", (req, res, next) => {
     queries
         .listBooks()
-        .then(books => {
-            response.json({ books });
+        .then(authors_books => {
+            res.render("books", { authors_books });
         })
         .catch(next);
 });
+
+// app.get("/books/:id", (req, res, next) => {
+//     queries
+//         .listBooks()
+//         .then(authors_books => {
+//             res.render("books", { authors_books });
+//         })
+//         .catch(next);
+// });
 
 app.listen(port, () => {
     console.log("listening on port", port);
