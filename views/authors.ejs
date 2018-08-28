@@ -1,0 +1,27 @@
+<% include ./partials/header %>
+
+<body>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<% authors_books.forEach(function(author){ %>
+    <div class="book-card">
+        <div class="book-image">
+            <img class="book-card-image" class="ui centered rounded image" src='<%= author.portrait_url %>' >
+        </div>
+        <div class="book-info">
+            <h2><%=author.first_name%> <%=author.last_name%> </h2>
+            <span><%= author.biography %></span>
+            <a href="/books/<%= author._id %>">Read More</a>
+        </div>    
+    </div>
+        <% }) %>
+
+
+
+</body>
+
+<% include ./partials/footer %>

@@ -26,6 +26,15 @@ app.get("/books", (req, res, next) => {
         .catch(next);
 });
 
+app.get("/authors", (req, res, next) => {
+    queries
+        .listAuthors()
+        .then(authors_books => {
+            res.render("authors", { authors_books });
+        })
+        .catch(next);
+});
+
 // app.get("/books/:id", (req, res, next) => {
 //     queries
 //         .listBooks()
