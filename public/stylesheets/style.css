@@ -3,6 +3,10 @@ body {
     margin-right: 40px;
 }
 
+footer {
+    bottom: 0;
+}
+
 #g-reads-header {
     color: white;
     font-size: 15pt;
@@ -18,7 +22,14 @@ body {
     width: 500px;
     flex-flow: column nowrap;
     border: solid black;
+    justify-content: center;
+    align-items: center;
 }
+
+#splash-header {
+    justify-self: center;
+}
+
 #home-container {
     display: flex;
     justify-content: space-around;
@@ -27,6 +38,7 @@ body {
 .splash-image {
     justify-content: center;
     height: 400px;
+    width: 400px;
 }
 
 .book-info {
@@ -39,6 +51,8 @@ body {
 
 .book-card {
     display: flex;
+    margin: 8px;
+    box-shadow: 2px 2px 2px 1px gray;
 }
 
 .book-card-image {

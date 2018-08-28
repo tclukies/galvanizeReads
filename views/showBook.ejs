@@ -1,0 +1,28 @@
+<% include ./partials/header %>
+
+<body>
+<br>
+<br>
+<br>
+<br>
+
+<% include ./partials/headerNav %>
+
+    <div class="book-card">
+        <div class="book-image">
+            <img class="book-card-image" class="ui centered rounded image" src='<%= authors_books.cover_url %>' >
+        </div>
+        <div class="book-info">
+            <h2><%=authors_books.title%></h2>
+            <h4>By: <%=authors_books.first_name%> <%=authors_books.last_name%></h4>
+            <h5><%=authors_books.genre%> </h5>
+            <span><%= authors_books.synopsis %></span>
+        </div>    
+    </div>
+
+
+
+
+</body>
+
+<% include ./partials/footer %>
