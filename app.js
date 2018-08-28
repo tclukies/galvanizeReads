@@ -17,6 +17,15 @@ app.get("/", function(req, res) {
     res.render("home");
 });
 
+app.get("/api/books", (request, response, next) => {
+    queries
+        .listAPIBooks()
+        .then(books => {
+            response.json({ books });
+        })
+        .catch(next);
+});
+
 app.get("/books", (req, res, next) => {
     queries
         .listBooks()
@@ -35,14 +44,23 @@ app.get("/authors", (req, res, next) => {
         .catch(next);
 });
 
-// app.get("/books/:id", (req, res, next) => {
-//     queries
-//         .listBooks()
-//         .then(authors_books => {
-//             res.render("books", { authors_books });
-//         })
-//         .catch(next);
-// });
+app.get("/books/:id", (req, res, next) => {
+    queries
+        .listBooksByID(req.params.id)
+        .then(authors_books => {
+            res.render("showBook", { authors_books });
+        })
+        .catch(next);
+});
+
+app.get("/authors/:id", (req, res, next) => {
+    queries
+        .listAuthorsByID(req.params.id)
+        .then(authors_books => {
+            res.render("showAuthor", { authors_books });
+        })
+        .catch(next);
+});
 
 app.listen(port, () => {
     console.log("listening on port", port);

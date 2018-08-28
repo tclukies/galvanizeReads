@@ -6,20 +6,9 @@
 <br>
 <br>
 
-<div class="ui horizontal segments" id="authors-nav">
-    <a href="/authors">
-        <div class="authors-nav-container">
-        <img class = "nav-image" src="https://s3-us-west-2.amazonaws.com/assessment-images/galvanize_reads/photos/kyle_simpson.jpg">
-            <div class="nav-title">Authors</div>
-        </div>
-    </a>
-    <a href="/books">
-        <div class="authors-nav-container">
-            <img class="nav-image" src="https://images-na.ssl-images-amazon.com/images/I/B172ZcXnYDS._SL250_FMpng_.png">
-            <div class="nav-title">Books</div>
-        </div>    
-    </a>
-</div>
+<% include ./partials/headerNav %>
+
+<h4>Total Authors: <%=authors_books.length%></h4>
 
 <% authors_books.forEach(function(author){ %>
     <div class="book-card">
@@ -30,11 +19,9 @@
             <h2><%=author.first_name%> <%=author.last_name%> </h2>
             <span><%= author.biography %></span>
             <ul>
-    
-                    <li> <%= author.title %></li>
-           
+                    <li> Book: <%= author.title %></li>
             </ul>
-            <a href="/books/<%= author._id %>">Read More</a>
+            <a href="/authors/<%= author.author_id %>">View Author</a>
         </div>    
     </div>
         <% }) %>
